@@ -66,10 +66,21 @@ public class ComicCollectorSystem {
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo, StandardCharsets.UTF_8))) {
             String linea;
             while ((linea = br.readLine()) != null) {
+                // Esperado: Nombre,Año,Autor
                 String[] partes = linea.split(",");
-                if (partes.length >= 2) {
-                    Comic comic = new Comic(partes[0].trim(), partes[1].trim());
-                    agregarComic(comic);
+                if (partes.length >= 3) {
+                    String titulo = partes[0].trim();
+                    String añoStr = partes[1].trim();
+                    String autor = partes[2].trim();
+                    try {
+                        int año = Integer.parseInt(añoStr);
+                        if (titulo.isEmpty() || autor.isEmpty() || año < 1900 || año > 2100) continue;
+                        Comic comic = new Comic(titulo, año, autor);
+                        agregarComic(comic);
+                    } catch (NumberFormatException e) {
+                        // Ignorar líneas con año inválido
+                        continue;
+                    }
                 }
             }
         }
