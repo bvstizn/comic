@@ -12,7 +12,6 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        cargarDatosIniciales();
 
         int opcion;
         do {
@@ -155,15 +154,4 @@ public class Main {
         return texto;
     }
 
-    private static void cargarDatosIniciales() {
-        // Opcional: carga automática al inicio (puedes dejarlo vacío)
-        // Puedes cargar un archivo por defecto si lo deseas
-        // Ejemplo:
-        // try {
-        //     sistema.cargarComicsDesdeCSV("comics.csv");
-        //     sistema.cargarUsuariosDesdeCSV("usuarios.csv");
-        // } catch (IOException e) {
-        //     System.out.println("No se encontraron archivos iniciales.");
-        // }
-    }
 }
