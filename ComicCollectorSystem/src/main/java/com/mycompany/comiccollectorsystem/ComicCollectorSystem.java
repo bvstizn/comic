@@ -24,10 +24,17 @@ public class ComicCollectorSystem {
         usuariosOrdenados = new TreeSet<>();
     }
 
+    //Obtiene los Comics
     public List<Comic> getComics() {
         return comics;
     }
 
+    //Obtiene usuarios
+    public Map<String, Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+ 
     public void agregarComic(Comic comic) {
         comics.add(comic);
         comicUnicos.add(comic);
@@ -66,7 +73,7 @@ public class ComicCollectorSystem {
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo, StandardCharsets.UTF_8))) {
             String linea;
             while ((linea = br.readLine()) != null) {
-                // Esperado: Nombre,Año,Autor
+                //FORMATO : Titulo, Año, Autor
                 String[] partes = linea.split(",");
                 if (partes.length >= 3) {
                     String titulo = partes[0].trim();

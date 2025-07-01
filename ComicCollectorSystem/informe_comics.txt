@@ -1,0 +1,10 @@
+Spider-Man, 1962, Stan Lee, Disponible
+Batman, 1939, Bob Kane, Disponible
+Superman, 1938, Jerry Siegel, Disponible
+X-Men, 1963, Stan Lee, Disponible
+The Flash, 1956, Robert Kanigher, Disponible
+Green Lantern, 1940, Bill Finger, Disponible
+Wonder Woman, 1941, William Moulton Marston, Disponible
+Iron Man, 1963, Stan Lee, Disponible
+Captain America, 1941, Joe Simon, Disponible
+Daredevil, 1964, Stan Lee, Disponible

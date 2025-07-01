@@ -53,7 +53,7 @@ public class Comic implements Comparable<Comic> {
     public String toString() {
         return "Comic{" +
                "titulo='" + titulo + '\'' +
-               ", anio=" + año +
+               ", año=" + año +
                ", autor='" + autor + '\'' +
                ", reservado=" + reservado +
                '}';
